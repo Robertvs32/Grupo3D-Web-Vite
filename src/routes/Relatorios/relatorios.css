@@ -1,0 +1,28 @@
+#containerRel{
+    background-color: rgb(58, 58, 58);
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    flex: 1;
+}
+#titleRel{
+    border-bottom: 2px solid white;
+    padding-bottom: 12px;
+    text-align: center;
+}
+#btnAddColecao{
+    margin-top: 45px;
+    padding: 8px 14px;
+    background-color: rgba(78, 78, 78, 0);
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#btnAddColecao:hover{
+    background-color: var(--cor-principal);
+
+}

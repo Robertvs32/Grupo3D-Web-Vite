@@ -1,0 +1,87 @@
+#containerLogin{
+    background-color: rgb(11, 10, 10);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#imgLogin{
+    width: 200px;
+    margin-bottom: 40px;
+}
+#loginSubContainer{
+    height: 550px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 75px;
+}
+.inputLogin{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+.imgInputUser{
+    width: 18px;
+    margin-right: 5px;
+}
+.imgInputSenha{
+    width: 20px;
+    margin-right: 7px;
+}
+.input{
+    background: none;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    font-family: "Sora", sans-serif;
+    color: white;
+    font-size: 0.9rem;
+}
+.input:focus{
+    border: none;
+    outline: none;
+}
+#btnLogin{
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.24s linear, box-shadow 0.24s linear
+}
+#btnLogin:hover{
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+    color: rgb(255, 123, 0)
+}
+
+@media(max-width: 900px){
+    .input{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 480px){
+    #loginSubContainer{
+        width: 95%;
+    }
+}
+
+@media(max-width: 320px){
+    .inputLogin{
+        width: 90%;
+    }
+    #imgLogin{
+        width: 65%;
+    }
+}

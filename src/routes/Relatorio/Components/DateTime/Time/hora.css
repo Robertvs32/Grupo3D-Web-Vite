@@ -1,0 +1,32 @@
+.containerTime{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    border: 2px solid white;
+    margin: 7px;
+    min-height: 67px;
+    border-radius: 5px;
+    padding: 2px;
+}
+.labelTime{
+    background-color: rgb(255, 94, 0);
+    padding: 4px;
+    color: white;
+    font-size: 14.5px;
+    font-weight: bold;
+}
+.inputTime{
+    padding: 4px;
+    font-size: 15px;
+    outline: none;
+    height: 100%;
+    border: none;
+    color: black;
+    border-radius: 0;
+}
+
+@media(max-width: 508px){
+    .containerTime{
+        width: 100%;
+    }
+}

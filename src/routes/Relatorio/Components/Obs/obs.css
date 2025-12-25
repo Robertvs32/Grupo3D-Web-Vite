@@ -1,0 +1,38 @@
+.containerObsRelatorio{
+    display: flex;
+    flex-direction: column;
+    max-width: 2000px;
+    border: 2px solid white;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.labelObsRelatorio{
+    background-color: rgb(255, 94, 0);
+    padding: 4px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.textareaObsRelatorio{
+    padding: 4px;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+    height: 100%;
+    border: none;
+}
+
+@media(max-width:790px){
+    #containerObsRelatorio{
+        width: 100%;
+    }
+    .labelObsRelatorio{
+        width: 100%;
+    }
+    .textareaObsRelatorio{
+        width: 100%
+    }
+}

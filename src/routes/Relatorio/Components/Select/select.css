@@ -1,0 +1,32 @@
+.containerSelectRelatorio{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    border: 2px solid white;
+    margin: 7px;
+    max-height: 200px;
+    min-height: 67px;
+    border-radius: 5px;
+    padding: 2px;
+}
+.labelSelectRelatorio{
+    background-color: rgb(255, 94, 0);
+    padding: 4px;
+    color: white;
+    font-size: 14.5px;
+    font-weight: bold;
+}
+.selectRelatorio{
+    padding: 4px;
+    font-size: 15px;
+    outline: none;
+    height: 100%;
+    border: none;
+    width: 100%;
+    color: black;
+}
+@media(max-width: 508px){
+    .containerSelectRelatorio{
+        width: 100%;
+    }
+}
