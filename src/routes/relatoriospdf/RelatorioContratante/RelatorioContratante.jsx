@@ -5,6 +5,7 @@ import RelatorioContratantePDF from './relatorioContratantePDF';
 import { PDFViewer } from '@react-pdf/renderer';
 import { useLocation } from 'react-router';
 import usePdf from '../../../hooks/usePdf';
+import ReturnBtn from '../../../Components/ReturnBtn/ReturnBtn';
 
 export default function RelatorioContratante(){
 
@@ -96,7 +97,7 @@ export default function RelatorioContratante(){
 
             //se a viagem foi fora de perimetro, adiciona tambem o valor de kms
             //Adicionar campo de perimetro no relatorio para usar aqui
-            if(true){
+            if(item.foraPerimetro){
                 calculoViagem += Number(valorKm.toFixed(2))
             };
 
@@ -154,7 +155,9 @@ export default function RelatorioContratante(){
 
             <h1 id="titleRelatorioContratante">Relatorio contratante</h1>
 
-            <Link id="linkColecoes" to="/colecoes">Retornar as colecoes</Link>
+            <ReturnBtn
+                path="/"
+            />
 
         <div id="placasContainer">
             {placas.map((item) => (

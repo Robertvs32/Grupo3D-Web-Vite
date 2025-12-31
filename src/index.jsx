@@ -10,6 +10,7 @@ import Atribuicoes from './routes/Atribuicoes/Atribuicoes';
 import Setores from './routes/Setores/Setores';
 import './index.css'
 import Usuarios from './routes/Usuarios/Usuarios';
+import RelatorioMotorista from './routes/relatoriospdf/relatorioMotorista/RelatorioMotorista';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "relatoriocontratante",
         element: <RelatorioContratante/>
+      },
+      {
+        path: "relatorioMotorista",
+        element: <RelatorioMotorista/>
       },
       {
         path: "usuarios",

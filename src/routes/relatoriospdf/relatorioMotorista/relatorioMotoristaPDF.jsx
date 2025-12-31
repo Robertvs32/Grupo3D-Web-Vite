@@ -3,7 +3,7 @@ import logo from '../../../assets/img/logoPreta.png';
 import Sora from '../../../assets/fonts/Sora-Regular.ttf'
 import SoraBold from '../../../assets/fonts/Sora-Bold.ttf'
 
-export default function RelatorioContratantePDF({arrayRelatorios, placas, valorTotal}){
+export default function RelatorioMotoristaPDF({arrayRelatorios, placas, valorTotal}){
 
 Font.register({
     family: 'Sora',
@@ -36,14 +36,14 @@ function horasFormatadas(horas){
                         style={styles.logoImg}
                     />
 
-                    <Text style={styles.title}>Relatorio contratante</Text>
+                    <Text style={styles.title}>Relatorio Motorista</Text>
 
                     <View style={styles.containerPlacas}>
                     {placas.map((item) => (
                         <View style={styles.cardPlacas}>
                             <Text style={styles.textPlaca}>{item.placa}</Text>
-                            <Text style={styles.textValor}>{`Valor hora R$: ${item.valorHora}`}</Text>
-                            <Text style={styles.textValor}>{`Valor Km R$: ${item.valorKm}`}</Text>
+                            <Text style={styles.textValor}>{`Valor hora R$: ${item.valor_hora_motorista}`}</Text>
+                            <Text style={styles.textValor}>{`Valor hora viagem R$: ${item.valor_hora_viagem_motorista}`}</Text>
                         </View>
                     ))}
                     </View>

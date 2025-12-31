@@ -1,0 +1,23 @@
+#returnBtn{
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease
+}
+#linkBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#returnBtn img{
+    width: 80%;
+    height: 80%;
+}
+#returnBtn:hover{
+    background-color: rgb(112, 112, 112);
+}
