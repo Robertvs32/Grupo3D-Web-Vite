@@ -8,8 +8,8 @@ import Placas from './routes/Placas/Placas';
 import RelatorioContratante from './routes/relatoriospdf/RelatorioContratante/RelatorioContratante';
 import Atribuicoes from './routes/Atribuicoes/Atribuicoes';
 import Setores from './routes/Setores/Setores';
-import Colecoes from './routes/Colecoes/Colecoes';
 import './index.css'
+import Usuarios from './routes/Usuarios/Usuarios';
 
 const router = createBrowserRouter([
   {
@@ -37,12 +37,12 @@ const router = createBrowserRouter([
         element: <Setores/>
       },
       {
-        path: "colecoes",
-        element: <Colecoes/>
-      },
-      {
         path: "relatoriocontratante",
         element: <RelatorioContratante/>
+      },
+      {
+        path: "usuarios",
+        element: <Usuarios/>
       }
     ]
   }

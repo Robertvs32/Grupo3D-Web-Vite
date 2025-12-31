@@ -30,14 +30,6 @@ export default function Sidebar({setterLogout}){
             />
 
             <CardSidebar
-                titulo="Colecoes"
-                img={relatorios}
-                path="colecoes"
-                setter={setShowSidebar}
-            />
-
-
-            <CardSidebar
                 titulo="Placas"
                 img={Placa}
                 path="placas"
@@ -61,7 +53,7 @@ export default function Sidebar({setterLogout}){
             <CardSidebar
                 titulo="Usuários"
                 img={Usuario}
-                path="placas"
+                path="usuarios"
                 setter={setShowSidebar}
             />
 
