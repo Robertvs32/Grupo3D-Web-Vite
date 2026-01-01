@@ -30,8 +30,8 @@ export default function useRelatorio(){
     const [alimentacao, setAlimentacao] = useState('');
     const [arrayAlimentacao, setArrayAlimentacao] = useState([]);
     const [verificado, setVerificado] = useState('');
-    const [pagamento, setPagamento] = useState('');
-    const [horasTrabalhadas, setHorasTrabalhadas] = useState('')
+    const [horasTrabalhadas, setHorasTrabalhadas] = useState('');
+    const [foraPerimetro, setForaPerimetro] = useState('');
 
     const relatorioGetters = {
         motorista,
@@ -60,8 +60,8 @@ export default function useRelatorio(){
         alimentacao,
         arrayAlimentacao,
         verificado,
-        pagamento,
-        horasTrabalhadas
+        horasTrabalhadas,
+        foraPerimetro
     }
 
     const relatorioSetters = {
@@ -91,7 +91,7 @@ export default function useRelatorio(){
         setAlimentacao,
         setArrayAlimentacao,
         setVerificado,
-        setPagamento
+        setForaPerimetro
     }
 
     const buscaRelatorio = async (id) => {
@@ -151,10 +151,10 @@ export default function useRelatorio(){
         setor,
         outrosAtribuicao,
         outrosSetor,
+        foraPerimetro,
         alimentacao,
         ...(alimentacao === true && {arrayAlimentacao: arrayAlimentacao}),
         ...(verificado == "true" || verificado == true ? { verificado: true } : { verificado: false }),
-        pagamento,
         horasTrabalhadas: (dateTimeFim - dateTimeIni) / 3600000,
         kmRodado: kmFim - kmIni
     }
@@ -202,7 +202,6 @@ export default function useRelatorio(){
         setAlimentacao(object.alimentacao);
         setArrayAlimentacao(object.arrayAlimentacao ?? [{id: 1, refeicao: '', valor: ''}]);
         setVerificado(object.verificado);
-        setPagamento(object.pagamento);
         setKmIni(object.kmIni);
         setKmFim(object.kmFim);
         setOutrosAtribuicao(object.outrosAtribuicao);
@@ -220,6 +219,7 @@ export default function useRelatorio(){
         setDateTimeFim(object.dateTimeFim.toDate());
         setAtribuicao(object.atribuicao);
         setHorasTrabalhadas(object.horasTrabalhadas)
+        setForaPerimetro(object.foraPerimetro)
     }
 
     return{

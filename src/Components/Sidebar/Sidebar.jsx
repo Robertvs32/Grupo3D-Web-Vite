@@ -13,10 +13,15 @@ import setaEsquerda from '../../assets/img/esquerda.png';
 import setaDireita from '../../assets/img/direita.png';
 import atribuicao from '../../assets/img/atribuicao.png'
 import Setores from '../../assets/img/setores.png'
+import CardSidebarExtends from './CardSidebarExtends';
+import CardSidebarChildren from './CardSidebarChildren';
+import iconMais from '../../assets/img/mais.png'
+import iconGerenciarUsuarios from '../../assets/img/gerenciamento-de-usuarios.png'
 
 export default function Sidebar({setterLogout}){
 
     const [showSidebar, setShowSidebar] = useState(true);
+    const [showUserFunctions, setShowUserFunctions] = useState(false);
 
     return(
         <div className={`${showSidebar ? 'sidebarContainer' : 'sidebarContainerFechado'}`}>
@@ -50,12 +55,27 @@ export default function Sidebar({setterLogout}){
                 setter={setShowSidebar}
             />
 
-            <CardSidebar
-                titulo="Usuários"
+            <CardSidebarExtends
+                setter={setShowUserFunctions}
                 img={Usuario}
-                path="usuarios"
-                setter={setShowSidebar}
+                titulo="Usuarios"
             />
+
+            <div className={showUserFunctions ? 'optionUsersTrue' : 'optionUsersFalse'}>
+                <CardSidebarChildren
+                    titulo="Gerenciar"
+                    img={iconGerenciarUsuarios}
+                    path="usuarios/gerenciar"
+                    setter={setShowSidebar}
+                />
+
+                <CardSidebarChildren
+                    titulo="Cadastrar"
+                    img={iconMais}
+                    path="usuarios/cadastrar"
+                    setter={setShowSidebar}
+                />
+            </div>
 
             <button 
                 id="logoutIcon"
@@ -64,8 +84,7 @@ export default function Sidebar({setterLogout}){
                     signOut(auth);
                 }}
             > 
-                <img src={Logout}/>
-                
+                <img src={Logout}/> 
             </button>
 
             <button id="btnSidebar"

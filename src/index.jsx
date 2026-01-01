@@ -9,7 +9,7 @@ import RelatorioContratante from './routes/relatoriospdf/RelatorioContratante/Re
 import Atribuicoes from './routes/Atribuicoes/Atribuicoes';
 import Setores from './routes/Setores/Setores';
 import './index.css'
-import Usuarios from './routes/Usuarios/Usuarios';
+import CadastroUsuarios from './routes/Usuarios/CadastroUsuarios/CadastroUsuarios'
 import RelatorioMotorista from './routes/relatoriospdf/relatorioMotorista/RelatorioMotorista';
 
 const router = createBrowserRouter([
@@ -46,8 +46,8 @@ const router = createBrowserRouter([
         element: <RelatorioMotorista/>
       },
       {
-        path: "usuarios",
-        element: <Usuarios/>
+        path: "usuarios/cadastrar",
+        element: <CadastroUsuarios/>
       }
     ]
   }

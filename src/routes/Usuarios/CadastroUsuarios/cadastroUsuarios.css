@@ -1,0 +1,85 @@
+#containerCadastroUsuarios{
+    background-color: rgb(58, 58, 58);
+    min-height: 100vh;
+    padding: 20px;
+    flex: 1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#titleCadastroUsuarios{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: 35px;
+}
+#titleCadastro{
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.863);
+}
+#cadastroContainer{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2px 1px rgba(255, 115, 0, 0.699);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    width: 600px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.labelCadastroUsuario{
+    width: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px 0 3px 5px;
+    color: rgba(0, 0, 0, 0.863);
+}
+.containerInput{
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgInput{
+    width: 23px;
+    height: 23px;
+}
+.inputCadastroUsuario{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+#btnCriarUsuario{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 16px 0;
+    border: none;
+    transition: background-color 0.25s linear;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 55%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+#btnCriarUsuario:hover{
+    background-color: rgb(255, 123, 0);
+}
+
+@media(max-width: 680px){
+    #cadastroContainer{
+        width: 100%;
+    }
+}
