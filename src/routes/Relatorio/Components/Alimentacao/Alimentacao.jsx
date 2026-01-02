@@ -35,7 +35,7 @@ export default function Alimentacao({array, setter}){
         const valor = event.target.value;
         const novoArray = array.map((item) => {
             if(item.id == id){
-                return {...item, [campo]: valor};
+                return {...item, [campo]: valor.replace(',', '.')};
             }else{
                 return{...item}
             }

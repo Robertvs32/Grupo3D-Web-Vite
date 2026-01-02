@@ -2,11 +2,15 @@ import './placas.css'
 import Lixeira from '../../assets/img/lixeira.png'
 import usePlacas from '../../hooks/usePlacas';
 import { useState, useEffect } from 'react';
+import Confirm from '../../Components/Confirm/Confirm';
 
 export default function Placas(){
 
     const { buscaPlacas, atualizaPlacas } = usePlacas();
     const [arrayPlacas, setArrayPlacas] = useState([]);
+
+    const [showDelete, setShowDelete] = useState(false);
+    const [deleteId, setDeleteId] = useState('');
 
     function alteraValue(event, id, campo){
         let value = event.target.value;
@@ -17,7 +21,7 @@ export default function Placas(){
         const novoArray = arrayPlacas.map((item) => {
             if(item.id == id){
                 return(
-                    {...item, [campo]: value}
+                    {...item, [campo]: value.replace(',', '.')}
                 );
             }
             return item;
@@ -69,8 +73,8 @@ export default function Placas(){
                             <button 
                                 className="btnRemovePlaca"
                                 onClick={() => {
-                                    const confirm = window.confirm("Deseja excluir?");
-                                    confirm && removerPlaca(item.id)
+                                    setShowDelete(true);
+                                    setDeleteId(item.id);
                                 }}
                             >
                                 <img className="imgRemovePlaca" src={Lixeira} alt="" />
@@ -130,7 +134,7 @@ export default function Placas(){
             </div>
 
             <button
-                id="btnEnviarPlacas"
+                id="btnAtualizar"
                 onClick={async () => {
                     const confirm = window.confirm("Deseja atualizar?");
                     confirm && await atualizaPlacas(arrayPlacas)}
@@ -139,6 +143,18 @@ export default function Placas(){
             >
                 Atualizar placas
             </button>
+
+            {showDelete && (
+                <Confirm
+                    mensagem="Deseja excluir?"
+                    actionConfirm={() => {
+                        removerPlaca(deleteId);
+                        setShowDelete(false);
+                    }}
+                    actionCancel={() => setShowDelete(false)}
+                />
+            )}
+
         </div>
 
     );

@@ -127,7 +127,7 @@ function horasFormatadas(horas){
 
                     </View>
 
-                    <Text style={styles.valorTotal}>{`Valor total: R$${valorTotal.toFixed(2).replace('.', ',')}`}</Text>
+                    <Text style={styles.valorTotal}>{`Valor total: ${valorTotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`}</Text>
                     
                 </Page>
             </Document>

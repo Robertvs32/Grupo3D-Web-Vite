@@ -110,6 +110,12 @@ export default function Relatorio(){
                 />
 
                 <Checkbox
+                    name="Viagem"
+                    state={relatorioGetters.foraPerimetro}
+                    setter={relatorioSetters.setForaPerimetro}
+                />
+
+                <Checkbox
                     name="Parceiro"
                     state={relatorioGetters.parceiro}
                     setter={relatorioSetters.setParceiro}

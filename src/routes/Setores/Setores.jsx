@@ -80,7 +80,7 @@ export default function Setores(){
                 </button>
                 
                 <button 
-                    id="btnAtualizar"
+                    id="btnAtualizarSetor"
                     onClick={() => {
                         const confirm = window.confirm("Deseja atualizar as setores?");
                         confirm && atualizaSetores(setores)

@@ -69,9 +69,8 @@
     cursor: pointer;
     color: rgba(255, 255, 255, 0.824);
     margin-top: 4px;
-    /* width: 250px; */
 }
-#btnEnviarPlacas{
+#btnAtualizar{
     background-color: rgb(255, 255, 255);
     width: 165px;
     padding: 14px ;
