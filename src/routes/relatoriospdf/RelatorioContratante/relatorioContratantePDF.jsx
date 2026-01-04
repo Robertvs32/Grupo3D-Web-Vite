@@ -16,7 +16,10 @@ Font.register({
 function horasFormatadas(horas){
     const intHoras = parseInt(horas);
     const minutos = (horas - intHoras) * 60;
-
+    
+    if(horas == 0){
+        return 0;
+    }
     if(intHoras == 0){
         return(`${minutos} minutos`);
     }
