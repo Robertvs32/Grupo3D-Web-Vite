@@ -10,7 +10,6 @@ import Setor from './Components/Select/Setor/Setor';
 import Alimentacao from './Components/Alimentacao/Alimentacao';
 import Obs from './Components/Obs/Obs';
 import Verificado from './Components/Select/Verificado/Verificado';
-import Pago from './Components/Select/Pago/Pago';
 import DataInicio from './Components/DateTime/Date/DataInicio';
 import DataFim from './Components/DateTime/Date/DataFim';
 import HoraIni from './Components/DateTime/Time/HoraIni';
@@ -212,11 +211,6 @@ export default function Relatorio(){
                 <Verificado
                     state={relatorioGetters.verificado}
                     setter={relatorioSetters.setVerificado}
-                />
-
-                <Pago
-                    state={relatorioGetters.pagamento}
-                    setter={relatorioSetters.setPagamento}
                 />
 
             
