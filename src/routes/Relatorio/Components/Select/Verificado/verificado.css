@@ -1,11 +1,8 @@
 #containerVerificado{
     display: flex;
     flex-direction: column;
-    width: 210px;
     border: 2px solid white;
-    margin: 7px;
-    max-height: 200px;
-    min-height: 67px;
+    height: 68px;
     border-radius: 5px;
     padding: 2px;
 }

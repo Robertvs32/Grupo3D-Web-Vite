@@ -1,12 +1,11 @@
 .containerTime{
     display: flex;
     flex-direction: column;
-    width: 210px;
+    /* width: 210px; */
     border: 2px solid white;
-    margin: 7px;
-    min-height: 67px;
     border-radius: 5px;
     padding: 2px;
+    height: 68px;
 }
 .labelTime{
     background-color: var(--cor-principal);

@@ -1,12 +1,10 @@
 .containerInputRelatorio{
     display: flex;
     flex-direction: column;
-    width: var(--larguraEditarRelatorio);
+    /* width: var(--larguraEditarRelatorio); */
     border: 2px solid white;
     border-radius: 2px;
-    margin: 7px;
-    max-height: 200px;
-    min-height: 67px;
+    height: 68px;
     border-radius: 5px;
     padding: 2px;
 }

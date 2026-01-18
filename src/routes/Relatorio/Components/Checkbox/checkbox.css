@@ -1,12 +1,10 @@
 .checkBoxContainer{
     display: flex;
     flex-direction: column;
-    width: 210px;
+    /* width: 210px; */
     border: 2px solid white;
     border-radius: 5px;
-    margin: 7px;
-    max-height: 200px;
-    min-height: 67px;
+    height: 68px;
     padding: 2px
 }
 .labelCheckBox{
