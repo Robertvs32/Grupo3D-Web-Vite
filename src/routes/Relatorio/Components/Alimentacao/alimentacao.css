@@ -36,7 +36,7 @@ input{
 .inputRefeicao{
     flex: 1;
 }
-.containerInput{
+.containerInputAlimentacao{
     display: flex;
     flex: 1;
     align-items: center;

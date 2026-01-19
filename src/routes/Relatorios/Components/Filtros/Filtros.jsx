@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import usePlacas from '../../../../hooks/usePlacas';
 import SelectPlaca from './Components/SelectPlaca';
 
-export default function Filtros({setFiltros, filtros, limpaFiltros, buscaRelatorios}){
+export default function Filtros({setFiltros, filtros, limpaFiltros, buscaRelatorios, setGatilho}){
 
     const [placas, setPlacas] = useState([]);
     const { buscaPlacas } = usePlacas();
@@ -105,7 +105,7 @@ export default function Filtros({setFiltros, filtros, limpaFiltros, buscaRelator
                 <InputFiltro 
                     name="Produtor"
                     value={filtros.produtor}
-                    campo="setor"
+                    campo="produtor"
                     setFiltros={setFiltros}
                     filtros={filtros}
                 />
@@ -131,6 +131,7 @@ export default function Filtros({setFiltros, filtros, limpaFiltros, buscaRelator
                 id="btnFiltro"
                 onClick={() => {
                     limpaFiltros(); 
+                    setGatilho(ant => !ant);
                 }}
             >
                 Limpar Filtros

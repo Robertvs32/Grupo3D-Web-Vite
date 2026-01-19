@@ -1,4 +1,3 @@
-import { httpsCallable, getFunctions } from 'firebase/functions';
 import Alert from '../../../Components/Alert/Alert';
 import { useState } from 'react';
 import './cadastroUsuarios.css';
@@ -6,6 +5,7 @@ import Loader from '../../../Components/Loader/Loader';
 import iconUser from '../../../assets/img/user-laranja.png';
 import iconEmail from '../../../assets/img/email-laranja.png';
 import iconSenha from '../../../assets/img/senha-laranja.png';
+import { criarUsuario } from '../../../callableFunctions';
 
 export default function CadastroUsuarios(){
 
@@ -13,9 +13,6 @@ export default function CadastroUsuarios(){
 
     const [mensagem, setMensagem] = useState('');
     const [showAlert, setShowAlert] = useState(false);
-
-    const functions = getFunctions();
-    const criarUsuario = httpsCallable(functions, 'criarUsuario');
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');

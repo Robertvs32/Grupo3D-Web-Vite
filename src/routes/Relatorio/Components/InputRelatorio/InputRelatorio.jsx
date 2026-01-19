@@ -3,7 +3,7 @@ import './inputRelatorio.css'
 export default function InputRelatorio({name, value, setter}){
 
     function changeValue(e, setter){
-        const value = e.target.value;
+        const value = e.target.value.replace(',', '.');
         setter(value);
     }
 

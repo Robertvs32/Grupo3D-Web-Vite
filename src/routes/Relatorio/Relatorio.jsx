@@ -10,12 +10,10 @@ import Setor from './Components/Select/Setor/Setor';
 import Alimentacao from './Components/Alimentacao/Alimentacao';
 import Obs from './Components/Obs/Obs';
 import Verificado from './Components/Select/Verificado/Verificado';
-import DataInicio from './Components/DateTime/Date/DataInicio';
-import DataFim from './Components/DateTime/Date/DataFim';
-import HoraIni from './Components/DateTime/Time/HoraIni';
-import HoraFim from './Components/DateTime/Time/HoraFim';
 import Confirm from '../../Components/Confirm/Confirm';
 import Alert from '../../Components/Alert/Alert';
+import DateTimeFim from './Components/DateTime/Date/DateTimeFim';
+import DateTimeIni from './Components/DateTime/Date/DateTimeIni';
 
 
 export default function Relatorio(){
@@ -38,34 +36,19 @@ export default function Relatorio(){
 
             <div id="formularioContainer">
 
-                <DataInicio
-                    name="Data inicial"
+                
+                <DateTimeIni
                     state={relatorioGetters.dateTimeIni}
                     setter={relatorioSetters.setDateTimeIni}
                     dateTimeFim={relatorioGetters.dateTimeFim}
                 />
 
-                <HoraIni
-                    name="Hora Inicial"
-                    state={relatorioGetters.dateTimeIni} 
-                    setter={relatorioSetters.setDateTimeIni}
-                    dateTimeFim={relatorioGetters.dateTimeFim}
-                />
-
-                <DataFim
-                    name="Data inicial"
+                <DateTimeFim
                     state={relatorioGetters.dateTimeFim}
                     setter={relatorioSetters.setDateTimeFim}
                     dateTimeIni={relatorioGetters.dateTimeIni}
                 />
-
-                <HoraFim
-                    name="Hora Inicial"
-                    state={relatorioGetters.dateTimeFim} 
-                    setter={relatorioSetters.setDateTimeFim}
-                    dateTimeIni={relatorioGetters.dateTimeIni}
-                />
-
+               
                 <InputRelatorio
                     name="Motorista"
                     value={relatorioGetters.motorista}

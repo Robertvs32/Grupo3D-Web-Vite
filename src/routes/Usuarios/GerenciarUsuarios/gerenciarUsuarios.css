@@ -1,0 +1,53 @@
+#containerGerenciarUsuarios{
+    background-color: rgb(58, 58, 58);
+    min-height: 100vh;
+    padding: 20px;
+    flex: 1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#titleGerenciarUsuarios{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: 35px;
+}
+#containerUsuarios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+}
+.userCard{
+    background-color: white;
+    padding: 18px;
+    border-radius: 3px;
+}
+.titleUser{
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.infoUser{
+    font-size: 13px;
+}
+.excluirUser{
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 22px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+.excluirUser:hover{
+    background-color: rgb(128, 0, 0);
+}
+
+@media(max-width: 400px){
+    #containerUsuarios{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

@@ -10,15 +10,17 @@ import Alert from '../../Components/Alert/Alert'
 
 export default function RelatoriosPendentes(){
 
-    const { relatorios, buscaRelatorios, excluiDocumento, filtros, setFiltros, limpaFiltros, gatilho } = useRelatorios();
+    const { relatorios, buscaRelatorios, excluiDocumento, filtros, setFiltros, limpaFiltros } = useRelatorios();
     const [arrayIds, setArrayIds] = useState([]);
     const [showAlert, setShowAlert] = useState(false);
+    const [gatilho, setGatilho] = useState(true);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         buscaRelatorios();
-    },[])
+        console.log(relatorios[0])
+    },[gatilho])
 
     return(
         <div id="containerRel">
@@ -29,6 +31,7 @@ export default function RelatoriosPendentes(){
                 buscaRelatorios={buscaRelatorios}
                 setFiltros={setFiltros}
                 limpaFiltros={limpaFiltros}
+                setGatilho={setGatilho}
             />
 
             <div style={{display: 'flex'}}>

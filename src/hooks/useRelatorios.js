@@ -25,19 +25,19 @@ export default function useRelatorios(){
             const arrayRestricoes = [];
 
             if(filtros.dataInicio){
-                arrayRestricoes.push(where('dateIni', '>=', filtros.dataInicio),);
+                arrayRestricoes.push(where('dateIni', '==', filtros.dataInicio),);
             }
 
             if(filtros.dataFim){
-                arrayRestricoes.push(where('dateFim', '<=', filtros.dataFim),);
+                arrayRestricoes.push(where('dateFim', '==', filtros.dataFim),);
             }
 
             if(filtros.motorista != ''){
-                arrayRestricoes.push(where('motorista', '>=', filtros.motorista), where('motorista', '<', proximoPrefixo(filtros.motorista)));
+                arrayRestricoes.push(where('motorista', '==', filtros.motorista));
             }
 
             if(filtros.job != ''){
-                arrayRestricoes.push(where('job', '>=', filtros.job), where('job', '<', proximoPrefixo(filtros.job)));
+                arrayRestricoes.push(where('job', '==', filtros.job));
             }
 
             if(filtros.atribuicao != ''){
@@ -45,7 +45,7 @@ export default function useRelatorios(){
             }
 
             if(filtros.setor != ''){
-                arrayRestricoes.push(where('setor', '>=', filtros.setor), where('setor', '<', proximoPrefixo(filtros.setor)));
+                arrayRestricoes.push(where('setor', '==', filtros.setor));
             }
 
             if(filtros.contratante != ''){
@@ -64,8 +64,6 @@ export default function useRelatorios(){
                 const bolVerificado =  filtros.verificado == "true" ? true : false;
                 arrayRestricoes.push(where('verificado', '==', bolVerificado,));
             }
-
-            arrayRestricoes.push(orderBy('dateTimeIni', 'desc'))
 
             const colecao = collection(db, 'relatorios')
             const q = query(colecao, ...arrayRestricoes);

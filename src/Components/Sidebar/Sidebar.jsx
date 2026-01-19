@@ -65,7 +65,7 @@ export default function Sidebar({setterLogout}){
                 <CardSidebarChildren
                     titulo="Gerenciar"
                     img={iconGerenciarUsuarios}
-                    path="usuarios/gerenciar"
+                    path="usuarios/gerenciarusers"
                     setter={setShowSidebar}
                 />
 

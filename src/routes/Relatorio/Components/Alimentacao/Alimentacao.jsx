@@ -33,6 +33,7 @@ export default function Alimentacao({array, setter}){
 
     function alteraValue(event, array ,setter, campo, id){
         const valor = event.target.value;
+
         const novoArray = array.map((item) => {
             if(item.id == id){
                 return {...item, [campo]: valor.replace(',', '.')};
@@ -56,7 +57,7 @@ export default function Alimentacao({array, setter}){
             {array.map((refeicao) => {
                 return(
                     <div className="inputsAlimentacao">
-                        <div className="containerInput">
+                        <div className="containerInputAlimentacao">
                             <button 
                                 class="removerRef"
                                 onClick={() => removerRef(array, setter, refeicao.id)}
@@ -71,7 +72,7 @@ export default function Alimentacao({array, setter}){
                             />
                                 
                         </div>
-                        <div className="containerInput">
+                        <div className="containerInputAlimentacao">
                             <p>R$</p>
                             <input 
                                 className="inputValor"

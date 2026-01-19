@@ -98,6 +98,9 @@ export default function useRelatorio(){
         const refDoc = doc(db, "relatorios", id);
         const docSnapshot = await getDoc(refDoc);
         const relatorio = docSnapshot.data();
+        const relatorioOrdenado = relatorio.sort((relatorio1, relatorio2) => {
+            return relatorio1.dateIni.seconds - relatorio2.dateIni.seconds;
+        })
 
         recuperaValues(relatorio)
     }
@@ -125,6 +128,10 @@ export default function useRelatorio(){
     const dateFim = new Date(dateTimeFim);
     dateFim.setHours(0, 0, 0, 0);
 
+    const arrayAlimentacaoFormatado = arrayAlimentacao.map(item => {
+        return {...item, valor: Number(item.valor)}
+    })
+
     const valores = {
         dateIni,
         dateFim,
@@ -133,19 +140,19 @@ export default function useRelatorio(){
         dateTimeFim,
         obs,
         estacionamento,
-        valorEstacionamento,
+        valorEstacionamento: Number(valorEstacionamento),
         job,
         produtorEmpresa,
         produtorPessoa,
-        kmIni,
-        kmFim,
+        kmIni: Number(kmIni),
+        kmFim: Number(kmFim),
         zonaAzul,
-        qtdZonaAzul,
-        valorZonaAzul,
+        qtdZonaAzul: Number(qtdZonaAzul),
+        valorZonaAzul: Number(kmFim),
         inversor,
         pedagio,
         parceiro,
-        valorPedagioParceiro,
+        valorPedagioParceiro: Number(kmFim),
         placa,
         atribuicao,
         setor,
@@ -153,8 +160,8 @@ export default function useRelatorio(){
         outrosSetor,
         foraPerimetro,
         alimentacao,
-        ...(alimentacao === true && {arrayAlimentacao: arrayAlimentacao}),
-        ...(verificado == "true" || verificado == true ? { verificado: true } : { verificado: false }),
+        ...(alimentacao === true && {arrayAlimentacao: arrayAlimentacaoFormatado}),
+        ...(verificado == "true" ? { verificado: true } : { verificado: false }),
         horasTrabalhadas: (dateTimeFim - dateTimeIni) / 3600000,
         kmRodado: kmFim - kmIni
     }

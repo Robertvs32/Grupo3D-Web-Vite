@@ -11,6 +11,7 @@ import Setores from './routes/Setores/Setores';
 import './index.css'
 import CadastroUsuarios from './routes/Usuarios/CadastroUsuarios/CadastroUsuarios'
 import RelatorioMotorista from './routes/relatoriospdf/relatorioMotorista/RelatorioMotorista';
+import GerenciarUsuarios from './routes/Usuarios/GerenciarUsuarios/GerenciarUsuarios';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "usuarios/cadastrar",
         element: <CadastroUsuarios/>
+      },
+      {
+        path: "usuarios/gerenciarusers",
+        element: <GerenciarUsuarios/>
       }
     ]
   }
