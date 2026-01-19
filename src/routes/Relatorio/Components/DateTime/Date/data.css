@@ -14,15 +14,6 @@
     font-size: 14.5px;
     font-weight: bold;
 }
-.inputDate{
-    padding: 4px;
-    font-size: 15px;
-    outline: none;
-    height: 100%;
-    border: none;
-    color: black;
-    border-radius: 0;
-}
 
 @media(max-width: 508px){
     .containerDate{
